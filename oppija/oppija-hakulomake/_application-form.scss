@@ -1,0 +1,429 @@
+
+
+
+
+
+
+
+/*** Application form
+**************************************************************/
+
+#sitecontent .content
+{
+	margin:0.5em;
+}
+
+
+
+.application-number
+{
+	font-size:1.154em;
+	color:#000000;
+
+	.content {
+		margin: 0.5em;
+	}
+	.number
+	{
+		color:#149dca;
+	}
+
+}
+
+.popup-link {
+	margin: 0 0 0 1em;
+}
+
+
+
+
+/*** Theme help
+************************************************/
+.theme-help, .phase-help {
+
+	clear: both;
+
+	.help-text {
+		width: 90%;
+		float: left;
+		margin-bottom: 2em;
+	}
+
+	.helplink {
+		display: block;
+	    width: 20px;
+	    height: 21px;
+	    color: transparent;
+	    @include background-image("help-icon-sprite_idle-hover-selected-disabled.png");
+	    background-position: 0px center;
+	    background-repeat: no-repeat;
+	    float: right;
+
+	    &:hover {
+	        background-position: -20px center;
+	    }
+
+	    &:active,
+	    &:focus {
+	        background-position: -40px center;
+	    }
+
+	    &:disabled,
+	    &.disabled {
+	        background-position: -60px center;
+	    }
+	}
+}
+
+.phase-help {
+	.help-text {
+		margin-top: 2em;
+		width: 100%;
+	}
+}
+
+
+
+
+/*** Form step navigation
+************************************************/
+
+.form-steps
+{
+	margin:0px;
+	padding:0px;
+
+	.index
+	{
+		display:block;
+		position:absolute;
+		top:0px;
+		left:0px;
+		vertical-align:middle;
+		width:54px;
+		height:54px;
+		line-height:54px;
+		text-align:center;
+		margin:0px 0px;
+		padding:0px;
+		font-size:24px;
+		font-weight:bold;
+		@include background-image("form-steps-index-sprite_idle-hover-selected-active-disabled.png");
+		background-repeat:no-repeat;
+		background-position:right center;
+	}
+	
+	li
+	{
+		list-style:none;
+		display:block;
+		float:left;
+		
+		a, span
+		{
+			display:block;
+			line-height:54px;
+			position:relative;
+			padding:0px 4px 0px 52px;
+			text-decoration:none;
+			color:#9f9f9f;
+		}
+
+		a
+		{
+			color:#3e3e3e;
+			font-weight:bold;
+			
+			&:hover,
+			&.current
+			{
+				color:#149dca;
+			}
+			
+			.index
+			{
+				color:#3e3e3e;
+				background-position:0px center;
+			}
+			
+			&.current .index
+			{
+				color:#149dca;
+				background-position:-162px center;
+			}
+			
+			&:hover .index,
+			&.current:hover .index
+			{
+				color:#149dca;
+				background-position:-54px center;
+			}
+
+			&:active .index,
+			&.current:active  .index
+			{
+				color:#149dca;
+				background-position:-108px center;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+/*** Grades table
+************************************************/
+
+.applicant-grades
+{
+	thead tr th,
+	thead tr td,
+	tbody tr td
+	{
+		border:solid 1px #e1e1e1;
+		border-top-color:#ececec;
+		border-bottom-color:#c2c2c2;
+		vertical-align:top;
+		padding:0.5em 1em;
+		line-height:2em;
+		background-color:#ffffff;
+	}
+	
+	thead tr 
+	{
+		th
+		{
+			background-color:#dde9f0;
+			@include background-image("texture-angled-lines.gif");
+			background-repeat:repeat;
+			background-position:top left;
+			font-size:1.385em;
+			line-height:1.5em;
+			text-shadow:0px 1px 1px #ffffff;
+		}
+		
+		td
+		{
+			background-color:#e3eef3;
+			text-transform:uppercase;
+		}
+	}
+	
+	tbody tr:nth-child(even) td
+	{
+		background-color:#f3f7f9;
+	}
+
+}
+
+
+
+
+
+/*** Acceptance preference table
+************************************************/
+
+.preference-sort {
+	width: 100%;
+	
+
+	tbody 
+	{
+		tr td
+		{
+			border: solid 1px #e1e1e1;
+			border-top-color: #ececec;
+			border-bottom-color: #c2c2c2;
+			vertical-align: top;
+			padding: 20px 10px;
+			background-color: #ffffff;
+		}
+
+		tr:nth-child(odd) td
+		{
+			background-color: #f9fbfc;
+		}
+
+		tr:first-child td.index .down {
+			margin-top: 19px;
+		}
+	}
+
+	button.reset
+	{
+		float:right;
+		
+	}
+
+	.index
+	{		
+		span {
+			text-align: left;
+			font-size: 2.769em;
+			line-height: 1em;
+			margin: 0 20px 0 0;
+		}
+
+		.sort-arrows {
+			float: right;
+		}
+
+		.up, .down {
+			float: right;
+			font-size: 0;
+			line-height: 0;
+
+			span {
+				background-image: url('../img/updownarrow-sprite.png');
+				color: transparent;
+				font-size: 0;
+				line-height: 0;
+				width: 19px;
+				height: 18px;
+				margin: 0;
+				
+				span {
+					background-image: none;
+					width: 0;
+					height: 0;
+				}
+			}
+		}
+
+		.up {
+			span {
+				background-position: 0 0;
+			}
+
+			&:hover span {
+				background-position: -19px 0;
+			}
+		}
+
+		.down {
+			span {
+				background-position: 0 -18px;
+			}
+
+			&:hover span {
+				background-position: -19px -18px;
+			}
+		}
+	}
+
+	.preference-fields
+	{
+		margin-right:1.5em;
+		float:left;
+
+		.form-row
+		{
+			margin: 1em 0 0 0;
+		}
+
+		.form-row:first-child
+		{
+			margin-top: 0px;
+		}
+
+		.form-row-label
+		{
+			width:113px;
+			float:left;
+		}
+
+		.form-row-content
+		{
+			margin-left:130px;
+			float:none;
+			width:100%;
+		}
+	}
+
+	legend {
+		display: inline;
+	}
+}
+
+#search-applications
+{
+	.form-row.narrow
+	{
+		.form-row-label {
+			width: 100px;
+			max-width: 30%;
+			text-align: left;
+		}
+		
+		.form-row-content {
+			max-width: 70%;
+		}
+		
+	}
+}
+
+#gradegrid-table .btn-remove {
+	display: inline-block;
+	top: 8px;
+	right: 3px;
+	vertical-align: middle;
+}
+
+
+
+
+
+/*** Form summary table
+************************************************/
+
+.form-summary-table
+{
+
+	td
+	{
+		vertical-align:top;
+	}
+
+	.label
+	{
+		font-weight:bold;
+		padding-right:2em;
+		line-height:inherit;
+	}
+
+	.sublabel
+	{
+		text-align:right;
+		padding-right:1em;
+	}
+
+
+	.extra
+	{
+		padding-left:1em;
+	}
+
+	legend {
+		margin: 0;
+		padding: 0;
+	}
+
+	input[type="checkbox"] {
+		margin: 0 10px 0 0;
+	}
+
+	.additional-questions-table {
+		.label {
+			width: 80%;
+		}
+	}
+
+	fieldset {
+		margin: 1em 0 0;
+	}
+
+}
+

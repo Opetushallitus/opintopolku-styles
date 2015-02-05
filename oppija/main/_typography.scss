@@ -1,0 +1,90 @@
+body {
+	font-family: helvetica, arial, sans-serif;
+	font-size: 0.813em;
+	color: $color-font-default;
+	line-height: 1.538em;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6
+{
+	display: block;
+	font-weight: bold;
+	color: $color-font-default;
+}
+
+h1, .h1
+{
+	font-family: 'PT Sans Narrow', 'Helvetica Neue', helvetica, arial, sans-serif;
+	font-size: 1.692em;
+	line-height:1.3em;
+}
+
+h2, .h2
+{
+	font-family: 'PT Sans Narrow', 'Helvetica Neue', helvetica, arial, sans-serif;
+	font-size: 1.385em;
+	line-height:1.3em;
+}
+
+h3, .h3
+{
+	font-family: 'Helvetica Neue', helvetica, arial, sans-serif;
+	font-size: 0.923em;
+	line-height: 1.538em;
+	font-weight: normal;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+}
+
+h4, .h4
+{
+	font-family: 'Helvetica Neue', helvetica, arial, sans-serif;
+	font-size: 1em;
+	line-height: 1.538em;
+	text-transform: none;
+	
+}
+
+h5, .h5 {
+	font-family: 'Helvetica Neue', helvetica, arial, sans-serif;
+	font-size: 1em;
+	line-height: 1.538em;
+	font-weight: normal;
+	font-style: italic;
+}
+
+h6, .h6 {
+	font-family: 'Helvetica Neue', helvetica, arial, sans-serif;
+	font-size: 0.923em;
+	line-height: 1.538em;
+}
+
+small, .small {
+	font-size: 1em;
+	color: $color-font-small;
+
+	&.cursive {
+		font-style: italic;
+	}
+}
+
+b, strong, .bold { 
+	font-weight: bold; 
+}
+
+.uppercase {
+	text-transform:uppercase;
+}
+
+.banner-text {
+	padding-left: 20px;
+	color: #ff0000;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1.231em;
+}
+
+.text-disabled {
+	color: $color-font-small;
+}

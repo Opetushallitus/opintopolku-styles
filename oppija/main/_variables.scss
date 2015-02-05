@@ -1,0 +1,128 @@
+
+
+
+$img-folder-path: "../img/";
+
+/* color */
+$body-bg-color: #FFFFFF;
+$header-color: #149ECB;
+$border-color: #DDDDDD;
+$container-color: #F5F5F5;
+$navigation-bg-color: #06526b;
+$footer-navigation-color: #DCDCDC;
+
+$color-font-default: #333333;
+$font-color-inverse: #FFFFFF;
+$link-color: #2B4560;
+$link-color-hover: #000000;
+$link-color-active: #149ECB;
+$link-color-visited: #06526B;
+
+/*
+$tab-color: #DFF2F8;
+$tab-hover-color: #BFE4F1;
+$tab-border-color: #DCDCDC;
+*/
+$nav-tabs-bg-color: #DFF2F8;
+$nav-tabs-hover-bg-color: #BFE4F1;
+
+$tableRowOddColor: #FFFFFF;
+$tableRowEvenColor: #DFF2F8;
+$tableBorderColor: #BFE4F1;
+
+$color-font-small: #7F7F7F;
+
+$infobox-color: #FAFAFA;
+$infobox-banner-color: #FEEDBD;
+$infobox-border-color: #DDDDDD;
+
+$search-result-expanded-bg-color: #F3FAFC;
+
+/* font-size */
+$base-font-size-pixel: 13px;
+$base-font-size: 13; //in pixels
+
+/*** from haku-app sass styles ***/
+$actionmenu-icon-sprite: "actionmenu-icon-sprite.png";
+$arrow-down: "arrow-down.png";
+$arrow-right: "arrow-right.png";
+$arrow-sorting: "arrow-sorting.png";
+$arrow-up: "arrow-up.png";
+$arrow_up: "arrow_up.png";
+
+$breadcrumb-arrow: "breadcrumb-arrow.png";
+$breadcrumb-home: "breadcrumb-home.png";
+
+$application-basket-border-color: #e1e1e1;
+
+$color-ruler: #feba00;
+$color-ruler-strong: #333333;
+
+/* buttons */
+$button-primary-bg-color: #FECF4C;
+$button-primary-border-color: #DBA000;
+$button-primary-shadow-color: #FFEBA2;
+$button-primary-hover-gradient-color: #FEBA00;
+$button-primary-active-gradient-color: #FEBD0B;
+$button-primary-active-shadow-color: #BCAE87;
+
+$button-secondary-bg-color: #E6E6E6;
+$button-secondary-border-color: #CCCCCC;
+$button-secondary-shadow-color: #F5F5F5;
+$button-secondary-hover-gradient-color: #D8D8D8;
+$button-secondary-active-gradient-color: #EBEBEB;
+$button-secondary-active-shadow-color: #9A9A9A;
+
+$button-cta-bg-color: #529A5A;
+$button-cta-border-color: #3F7845;
+$button-cta-shadow-color: #64C06E;
+$button-cta-hover-gradient-color: #45844C;
+$button-cta-active-gradient-color: #43814A;
+$button-cta-active-shadow-color: #98A799;
+
+$button-blue-bg-color: #D2ECF5;
+$button-blue-border-color: #92CCE0;
+$button-blue-hover-bg-color: #9FDBF0;
+$button-blue-hover-shadow-color: #DFF2F8;
+$button-blue-hover-border-color: #59AECA;
+$button-blue-active-bg-color: #24B0DD;
+$button-blue-active-shadow1-color: #3A220B;
+$button-blue-active-shadow2-color: #11627C;
+$button-blue-active-border-color: #22A4CE;
+
+$button-text-color-disabled: #888888;
+$button-text-color-disabled-inverse: #CCCCCC;
+
+/* rounder corners */
+$default-border-radius: 3px;
+
+
+
+/* responsive layout limits */
+$break-960: 959px;
+$break-760: 759px;
+$break-520: 519px;
+
+@mixin clearfix {
+	*zoom: 1;
+     &:before,
+     &:after {
+         display: table;
+         content: "";
+         line-height: 0;
+     }
+    
+     &:after {
+         clear: both;
+     }
+}
+
+@mixin groupclear {
+     &:after {
+         visibility: hidden;
+         display: block;
+         content: "";
+         clear: both;
+         height: 0;
+     }
+}

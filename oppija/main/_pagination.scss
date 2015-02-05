@@ -1,0 +1,227 @@
+/* Pagination styles from twitter bootstrap */
+
+.pagination {
+    margin: 20px 0;
+}
+
+.pagination ul {
+    display: inline-block;
+    *display: inline;
+    margin-bottom: 0;
+    margin-left: 0;
+    @include rounded-corners(4px);
+    *zoom: 1;
+}
+
+.pagination ul > li {
+    display: inline;
+}
+
+.pagination ul > li > a,
+.pagination ul > li > span {
+    float: left;
+    padding: 4px 12px;
+    line-height: 20px;
+    text-decoration: none;
+    background-color: #ffffff;
+    border: 1px solid $infobox-border-color;
+    border-left-width: 0;
+}
+
+.pagination ul > li > a:hover,
+.pagination ul > li > a:focus,
+.pagination ul > .active > a,
+.pagination ul > .active > span {
+    background-color: $infobox-color;
+}
+
+.pagination ul > .active > a,
+.pagination ul > .active > span {
+    color: $color-font-small;
+    cursor: default;
+}
+
+.pagination ul > .disabled > span,
+.pagination ul > .disabled > a,
+.pagination ul > .disabled > a:hover,
+.pagination ul > .disabled > a:focus {
+    color: $color-font-small;
+    cursor: default;
+    background-color: transparent;
+}
+
+.pagination ul > li:first-child > a,
+.pagination ul > li:first-child > span {
+    border-left-width: 1px;
+    @include rounded-corner(bottom, left, 4px);
+    @include rounded-corner(top, left, 4px);
+}
+
+.pagination ul > li:last-child > a,
+.pagination ul > li:last-child > span {
+    @include rounded-corner(top, right, 4px);
+    @include rounded-corner(bottom, right, 4px);
+}
+
+.pagination-centered {
+    text-align: center;
+}
+
+.pagination-right {
+    text-align: right;
+}
+
+.pagination-large ul > li > a,
+.pagination-large ul > li > span {
+    padding: 11px 19px;
+    font-size: 17.5px;
+}
+
+.pagination-large ul > li:first-child > a,
+.pagination-large ul > li:first-child > span {
+    @include rounded-corner(bottom, left, 6px);
+    @include rounded-corner(top, left, 6px);
+}
+
+.pagination-large ul > li:last-child > a,
+.pagination-large ul > li:last-child > span {
+    @include rounded-corner(top, right, 6px);
+    @include rounded-corner(bottom, right, 6px);
+}
+
+.pagination-mini ul > li:first-child > a,
+.pagination-small ul > li:first-child > a,
+.pagination-mini ul > li:first-child > span,
+.pagination-small ul > li:first-child > span {
+    @include rounded-corner(top, left, 3px);
+    @include rounded-corner(bottom, left, 3px);
+}
+
+.pagination-mini ul > li:last-child > a,
+.pagination-small ul > li:last-child > a,
+.pagination-mini ul > li:last-child > span,
+.pagination-small ul > li:last-child > span {
+    @include rounded-corner(top, right, 3px);
+    @include rounded-corner(bottom, right, 3px);
+}
+
+.pagination-small ul > li > a,
+.pagination-small ul > li > span {
+    padding: 2px 10px;
+    font-size: 11.9px;
+}
+
+.pagination-mini ul > li > a,
+.pagination-mini ul > li > span {
+    padding: 0 6px;
+    font-size: 10.5px;
+}
+
+/* Pager */
+
+.pager {
+  margin: 7px 0 0 0;
+  text-align: center;
+  list-style: none;
+  *zoom: 1;
+}
+
+.pager ul {
+    padding: 0;
+}
+
+.pager:before,
+.pager:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.pager:after {
+  clear: both;
+}
+
+.pager li {
+  display: inline-block;
+  &.next {
+    float: right;
+  }
+
+  &.previous {
+    float: left;
+  }
+}
+
+.pager li > a,
+.pager li > span {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  color: $color-font-default;
+}
+
+.pager li > a:hover,
+.pager li > a:focus {
+  text-decoration: underline;
+}
+
+.pager .next > a,
+.pager .next > span {
+  float: right;
+
+  &:after {
+    background: transparent url('../img/angle-right.png') no-repeat scroll left 0;
+    content: "";
+    display: inline-block;
+    width: 9px;
+    height: 15px;
+    margin: 0 0 0 10px;
+    vertical-align: text-top;
+  }
+
+  &:hover {
+    &:after {
+      background-position: -9px 0;
+    }
+  }
+
+  &:active {
+    &:after {
+      background-position: -18px 0;
+    }
+  }
+}
+
+.pager .previous > a,
+.pager .previous > span {
+  float: left;
+
+  &:before {
+    background: transparent url('../img/angle-left.png') no-repeat scroll left 0;
+    content: "";
+    display: inline-block;
+    width: 9px;
+    height: 15px;
+    margin: 0 10px 0 0;
+    vertical-align: text-top;
+  }
+
+  &:hover {
+    &:before {
+      background-position: -9px 0;
+    }
+  }
+
+  &:active {
+    &:before {
+      background-position: -18px 0;
+    }
+  }
+}
+
+.pager .disabled > a,
+.pager .disabled > a:hover,
+.pager .disabled > a:focus,
+.pager .disabled > span {
+  display: none;
+}

@@ -1,0 +1,9 @@
+$infobox-border-color: #DDDDDD;
+$infobox-color: #FAFAFA;
+$color-font-small: #7F7F7F;
+
+@import "../variables";
+@import "../../utilities/functions";
+@import "pagination";
+@import "autocomplete";
+@import "hakemustenkasittely";

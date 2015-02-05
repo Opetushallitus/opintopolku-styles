@@ -1,0 +1,26 @@
+.helplink {
+    float: right;
+    display: block;
+    width: 20px;
+    height: 21px;
+    color: transparent !important;
+    background: none;
+    border: none;
+    @include background-image("help-icon-sprite_idle-hover-selected-disabled.png");
+    background-position: 0px center;
+    background-repeat: no-repeat;
+
+    &:hover {
+        background-position: -20px center;
+    }
+
+    &:active,
+    &:focus {
+        background-position: -40px center;
+    }
+
+    &:disabled,
+    &.disabled {
+        background-position: -60px center;
+    }
+}

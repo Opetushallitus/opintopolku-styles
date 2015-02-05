@@ -1,0 +1,142 @@
+.collapse {
+    height: 0;
+    @include transitions(height, 0.2s ease);
+
+    &.partial {
+        height: 200px;
+    }
+
+    .collapse-content-container {
+        margin: 1em 0 0 0;
+    }
+}
+
+.collapse-content-container {
+    .facet-item {
+        display: inline-block;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        a {
+            text-decoration: none;
+            color: $color-font-default;
+        }
+
+        .remove {
+            background: transparent url('../img/fasetti-location-close.png') scroll no-repeat 0 0;
+            width: 10px;
+            height: 10px;
+            margin: 0 0 0 5px;
+        }
+    }
+
+    .selected {
+        //background: transparent url('../img/fasetti-check.png') scroll no-repeat 0 center;
+        //font-weight: bold;
+
+        &:hover {
+            text-decoration: none;
+            cursor: auto;
+        }
+    }
+}
+
+.collapse.in {
+    height: auto;
+}
+
+.collapser {
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    
+    &.closed {
+        &:before {
+            display: inline-block;
+            margin: 0 10px 0 0;
+            content: " ";
+            width: 14px;
+            height: 14px;
+            background: transparent url('../img/triangle-yellow-close.png') scroll no-repeat 0 0;
+            overflow: hidden;
+        }
+
+        &:hover:before {
+            background-position: -14px 0;
+        }
+
+        &:active:before {
+            background-position: -28px 0;
+        }
+    }
+
+    &.opened {
+        &:before {
+            display: inline-block;
+            margin: 0 10px 0 0;
+            content: "";
+            width: 14px;
+            height: 14px;
+            background: transparent url('../img/triangle-yellow-open.png') scroll no-repeat 0 0;
+            overflow: hidden;
+        }
+
+        &:hover:before {
+            background-position: -14px 0;
+        }
+
+        &:active:before {
+            background-position: -28px 0;
+        }
+    }
+}
+
+.filter {
+    padding: 10px;
+    border-bottom: 1px solid $border-color;
+    border-top: none;
+
+    &:first-child {
+        border-top: 1px solid $border-color;
+    }
+}
+
+.facet-tree-container {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        ul {
+            margin-left: 16px;
+        }
+    }
+
+    .facet-tree-leaf {
+        margin-left: 16px;
+    }
+}
+
+.collapse-block {
+    padding:  0 0 1em 0;
+
+    & > a {
+        text-decoration: none;
+        color: $color-font-default;
+    }
+
+    .collapse-content-container {
+        margin: 1em 0 0 29px;
+    }
+}
+
+
+
+/* to reduce animation artifacts with Chrome */
+/*
+* {
+  -webkit-backface-visibility: hidden;  
+}
+*/

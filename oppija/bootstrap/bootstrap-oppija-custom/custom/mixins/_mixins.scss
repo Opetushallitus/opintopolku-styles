@@ -1,0 +1,7 @@
+@mixin background-image($img-name) {
+    background-image: url(#{$images-default-path}#{$img-name});
+}
+
+@mixin border-radius($radius...) {
+    border-radius: $radius;
+}

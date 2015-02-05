@@ -1,0 +1,565 @@
+.remove {
+    display: inline-block;
+    //vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    @include background-image("remove-sprite_idle-hover-selected-disabled.png");
+    background-position: 0px center;
+    overflow: hidden;
+    color: transparent;
+
+    &:hover {
+        background-position: -24px center;
+    }
+
+    &:focus,
+    &:active {
+        background-position: -48px center;
+    }
+
+    &:disabled {
+        background-position: -72px center;
+    }
+
+    span {
+        display: none;
+    }
+}
+
+button.button,
+input.button {
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+}
+
+button {
+    background: none;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+
+    span {
+        display: inline-block;
+        border: transparent 0px solid;
+        padding: 0px;
+        height: 28px;
+        line-height: 28px;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        margin: 0px 5px 0px 0px;
+        @include background-image("button-sprite_idle-hover-selected-disabled.png");
+        background-position: left 0px;
+
+        span {
+            white-space: nowrap;
+            display: block;
+            height: 28px;
+            line-height: 28px;
+            position: relative;
+            left: 5px;
+            background-repeat: no-repeat;
+            margin: 0px;
+            border: none;
+            padding: 0px 11px 0px 6px;
+            @include background-image("button-sprite_idle-hover-selected-disabled.png");
+            background-position: right -112px;
+        }
+    }
+
+    &:hover span {
+        background-position: left -28px;
+        span {
+            background-position: right -140px;
+        }
+    }
+
+    &:focus span,
+    &:active span {
+        background-position: left -56px;
+
+        span {
+            background-position: right -168px;
+        }
+    }
+
+    &:disabled span {
+        background-position: left -84px;
+        span {
+            background-position: right -196px;
+        }
+    }
+
+    &.primary span {
+        @include background-image("button-primary-sprite_idle-hover-selected-disabled.png");
+        span {
+            @include background-image("button-primary-sprite_idle-hover-selected-disabled.png");
+        }
+    }
+
+    &.print span {
+        @include background-image("button-print-sprite_idle-hover-selected-disabled.png");
+        span {
+            padding-left: 30px;
+            @include background-image("button-print-sprite_idle-hover-selected-disabled.png");
+        }
+    }
+
+    &.pdf span {
+        @include background-image("button-pdf-sprite_idle-hover-selected-disabled.png");
+        span {
+            padding-left: 25px;
+            @include background-image("button-pdf-sprite_idle-hover-selected-disabled.png");
+        }
+    }
+
+    &.arrow-down span {
+        margin-right: 33px;
+        @include background-image("button-arrow-down-sprite_idle-hover-selected-disabled.png");
+
+        span {
+            padding-right: 33px;
+            margin-right: 0px;
+            margin-left: -27px;
+            left: 33px;
+            @include background-image("button-arrow-down-sprite_idle-hover-selected-disabled.png");
+        }
+    }
+
+    &.arrow-up span {
+
+        @include background-image("button-arrow-up-sprite_idle-hover-selected-disabled.png");
+        margin-right: 33px;
+
+        span {
+            @include background-image("button-arrow-up-sprite_idle-hover-selected-disabled.png");
+            padding-right: 33px;
+            margin-right: 0px;
+            margin-left: -27px;
+            left: 33px;
+        }
+    }
+
+    &.left {
+        span {
+            margin: 0px 0px 0px 30px;
+            @include background-image("button-left-sprite_idle-hover-selected-disabled.png");
+            background-position: right -112px;
+            span {
+                margin: 0px -18px 0px 0px;
+                border: none;
+                padding: 0px 0px 0px 30px;
+                left: -30px;
+                @include background-image("button-left-sprite_idle-hover-selected-disabled.png");
+                background-position: left 0px;
+            }
+        }
+
+        &:hover span {
+            background-position: right -140px;
+
+            span {
+                background-position: left -28px;
+            }
+        }
+
+        &:focus span,
+        &:active span {
+            background-position: right -168px;
+
+            span {
+                background-position: left -56px;
+            }
+        }
+
+        &:disabled span {
+            background-position: right -196px;
+
+            span {
+                background-position: left -84px;
+            }
+        }
+    }
+
+    &.right {
+        span {
+            margin: 0 30px 0 0;
+            @include background-image("button-right-sprite_idle-hover-selected-disabled.png");
+            background-position: left -112px;
+            span {
+                margin: 0 0 0 -18px;
+                border: none;
+                padding: 0 30px 0 0;
+                left: 30px;
+                @include background-image("button-right-sprite_idle-hover-selected-disabled.png");
+                background-position: right 0px;
+            }
+        }
+
+        &:hover span {
+            background-position: left -140px;
+
+            span {
+                background-position: right -28px;
+            }
+        }
+
+        &:focus span,
+        &:active span {
+            background-position: left -168px;
+
+            span {
+                background-position: right -56px;
+            }
+        }
+
+        &:disabled span {
+            background-position: left -196px;
+
+            span {
+                background-position: right -84px;
+            }
+        }
+    }
+
+    &.plus {
+        span {
+            width: 22px;
+            height: 22px;
+            margin: 0px;
+            padding: 0px;
+            border: none;
+            @include background-image("button-plus-sprite_idle-hover-selected-disabled.png");
+            background-position: 0px center;
+
+            span {
+                display: none;
+            }
+        }
+
+        &:hover span {
+            background-position: -22px center;
+        }
+
+        &:active span {
+            background-position: -44px center;
+        }
+
+        &:disabled span {
+            background-position: -66px center;
+        }
+    }
+
+    &.link {
+        display: inline;
+        background: none;
+        border: none;
+        margin: 0px;
+        padding: 0px;
+        line-height: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        color: #149dca;
+
+        span {
+            padding: 0px;
+            margin: 0px;
+            background: none;
+
+            span {
+                line-height: inherit;
+                height: auto;
+                left: 0px;
+                padding: 0px;
+                margin: 0px;
+                background: none;
+            }
+        }
+    }
+}
+
+/* links displayed as buttons */
+a {
+    &.button {
+        /*
+        background: none;
+        border: none;
+        margin: 0px;
+        padding: 0px;
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
+        */
+
+        span {
+            display: inline-block;
+            border: transparent 0px solid;
+            padding: 0px;
+            height: 28px;
+            line-height: 28px;
+            background-color: transparent;
+            background-repeat: no-repeat;
+            margin: 0px 5px 0px 0px;
+            @include background-image("button-sprite_idle-hover-selected-disabled.png");
+            background-position: left 0px;
+
+            span {
+                white-space: nowrap;
+                display: block;
+                height: 28px;
+                line-height: 28px;
+                position: relative;
+                left: 5px;
+                background-repeat: no-repeat;
+                margin: 0px;
+                border: none;
+                padding: 0px 11px 0px 6px;
+                @include background-image("button-sprite_idle-hover-selected-disabled.png");
+                background-position: right -112px;
+            }
+        }
+
+        &.primary span {
+            @include background-image("button-primary-sprite_idle-hover-selected-disabled.png");
+            span {
+                @include background-image("button-primary-sprite_idle-hover-selected-disabled.png");
+            }
+        }
+
+        &.print span {
+            @include background-image("button-print-sprite_idle-hover-selected-disabled.png");
+            span {
+                padding-left: 30px;
+                @include background-image("button-print-sprite_idle-hover-selected-disabled.png");
+            }
+        }
+
+        &:hover span {
+            background-position: left -28px;
+            span {
+                background-position: right -140px;
+            }
+        }
+
+        &:focus, &:active {
+            color: $color-font-default;
+            span {
+                background-position: left -56px;
+
+                span {
+                    background-position: right -168px;
+                }
+            }
+        }
+
+        &:disabled span {
+            background-position: left -84px;
+            span {
+                background-position: right -196px;
+            }
+        }
+    }
+}
+
+.buttongroup {
+    .button {
+        position: relative;
+        overflow: visible;
+        display: inline-block;
+        padding: 0.25em;
+        width: 30px;
+        border: 1px solid rgb(219,160,0);
+        margin: 0;
+        color: $color-font-default;
+        text-decoration: none;
+        text-align: center;
+        white-space: nowrap;
+        cursor: pointer;
+        outline: none;
+        background-color:rgb(254,207,76);
+        box-shadow:inset 0px 1px 1px 0px rgb(255,230,162);
+        background-clip: padding-box;
+        float: left;
+        margin-left: -1px;
+
+        &:hover,
+        &:focus {
+            @include box-shadow(inset 0px 1px 1px 0px $button-primary-shadow-color);
+            @include background-gradient-from-top-to-bottom(linear, $button-primary-hover-gradient-color 0%, $button-primary-bg-color 100%);
+            -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#fffeba00,endColorstr=#fffecf4c,GradientType=0);
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#fffeba00,endColorstr=#fffecf4c,GradientType=0);
+        }
+
+        &:active,
+        &.active {
+            @include box-shadow(inset 0px 1px 0px 0px $button-primary-active-shadow-color);
+            @include background-gradient-from-top-to-bottom(linear, #bf8a02 25%, #e3a300 89%);
+            -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#bf8a02,endColorstr=#e3a300,GradientType=0);
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#bf8a02,endColorstr=#e3a300,GradientType=0);
+            box-shadow:none;
+        }
+
+        &:disabled,
+        &.disabled {
+          background: $button-primary-shadow-color;
+          color: $button-text-color-disabled;
+        }
+
+        &:first-child {
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+
+        &:last-child {
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+    }
+
+    @include groupclear
+}
+
+
+/* CSS only buttons */
+button.cssbutton,
+a.cssbutton {
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 10px 0 10px;
+    border-width: 1px;
+    border-style: solid;
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:link,
+    &:visited {
+        color: $color-font-default;
+    }
+
+    &:disabled, &[disabled] {
+        color: $button-text-color-disabled;
+    }
+
+    &.primary {   
+        background-color:$button-primary-bg-color;
+        border-color:$button-primary-border-color;
+        @include rounded-corners(3px);
+        @include box-shadow(inset 0px 1px 1px 0px $button-primary-shadow-color);
+
+        &:hover {
+            @include box-shadow(inset 0px 1px 1px 0px $button-primary-shadow-color);
+            background-color: $button-primary-hover-gradient-color;
+        }
+
+        &:active {
+            @include box-shadow(inset 0px 1px 0px 0px $button-primary-active-shadow-color);
+            background-color: $button-primary-active-gradient-color;
+        }
+
+        &:disabled, &[disabled] {
+            background: $button-primary-shadow-color none;
+            border-color: $button-primary-shadow-color;
+            @include box-shadow(none);
+            -ms-filter: none;
+            filter: none;
+        }
+    }
+
+    &.secondary {   
+        background-color:$button-secondary-bg-color;
+        border-color:$button-secondary-border-color;
+        @include rounded-corners(3px);
+        @include box-shadow(inset 0px 1px 1px 0px $button-secondary-shadow-color);
+
+        &:hover {
+            @include box-shadow(inset 0px 1px 1px 0px $button-secondary-shadow-color);
+            background-color: $button-secondary-hover-gradient-color;
+        }
+
+        &:active {
+            @include box-shadow(inset 0px 1px 0px 0px $button-secondary-active-shadow-color);
+            background-color: $button-secondary-active-gradient-color;
+        }
+
+        &:disabled, &[disabled] {
+            background: $button-secondary-shadow-color none;
+            border-color: $button-secondary-shadow-color;
+            @include box-shadow(none);
+            -ms-filter: none;
+            filter: none;
+        }
+    }
+
+    &.cta {
+        color: $font-color-inverse;
+        background-color:$button-cta-bg-color;
+        border-color:$button-cta-border-color;
+        @include rounded-corners(3px);
+        @include box-shadow(inset 0px 1px 1px 0px $button-cta-shadow-color);
+
+        &:hover {
+            @include box-shadow(inset 0px 1px 1px 0px $button-cta-shadow-color);
+            background-color: $button-cta-hover-gradient-color;
+        }
+
+        &:active {
+            @include box-shadow(inset 0px 1px 0px 0px $button-cta-active-shadow-color);
+            background-color: $button-cta-active-gradient-color;
+        }
+
+        &:disabled, &[disabled] {
+            background: $button-cta-shadow-color none;
+            border-color: $button-cta-shadow-color;
+            color: $button-text-color-disabled-inverse;
+            @include box-shadow(none);
+            -ms-filter: none;
+            filter: none;
+        }
+    }
+
+    &.blue {
+        background-color:$button-blue-bg-color;
+        border-color:$button-blue-border-color;
+        @include rounded-corners(3px);
+
+        &:hover {
+            background-color: $button-blue-hover-bg-color;
+            box-shadow: -1px 1px 1px 0px $button-blue-hover-shadow-color inset;
+            border-color: $button-blue-hover-border-color;
+        }
+
+        &:active {
+            background-color: $button-blue-active-bg-color;
+            box-shadow: -1px 1px 1px 0px $button-blue-active-shadow1-color inset, 0px 4px 4px 0px $button-blue-active-shadow2-color inset;
+            border-color: $button-blue-active-border-color;
+            
+        }
+
+        &:disabled, &[disabled] {
+            background: $button-blue-active-shadow1-color none;
+            border-color: $button-blue-active-shadow1-color;
+            color: $button-text-color-disabled-inverse;
+            @include box-shadow(none);
+            -ms-filter: none;
+            filter: none;
+        }
+    }
+
+    &.back {
+        @include background-image("button-icon-back.png");
+        padding-left: 36px;
+        background-repeat: no-repeat;
+        background-position: 5px center;
+    }
+}
+
+

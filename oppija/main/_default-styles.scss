@@ -1,0 +1,254 @@
+html, body
+{
+	margin:0px;
+}
+
+input, textarea, select, option
+{
+	font-family:inherit;
+	font-size:inherit;
+}
+
+.set-right {
+	float: right;
+}
+
+.set-left {
+	float: left;
+}
+
+.set-center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.hidden {
+	display: none;
+}
+
+.capitalized {
+	display: inline-block;
+  	text-transform: lowercase;
+
+  	&:first-letter {
+  		text-transform: uppercase;
+  	}
+}
+
+.break-word {
+	word-wrap: break-word;
+}
+
+.oneline {
+    white-space: nowrap;
+}
+
+/*** Links
+************************************************/
+
+a
+{
+	&:link {
+		color: $link-color;
+		text-decoration: underline;
+	}
+
+	&:active {
+		color: $link-color-active;
+		text-decoration: underline;
+	}
+
+	&:visited {
+		color: $link-color-visited;
+		text-decoration: underline;	
+	}
+}
+
+
+
+/*** input 
+************************************************/
+
+/***  Input(text), select
+**********************************/
+
+input[type="text"],
+input[type="password"], 
+select,
+.select {
+    background-color: #ebf3f7;
+    background-image: none;
+    border: none;
+    box-shadow: 0 1px 1px #B5B5B5 inset, 0 -1px 4px rgba(0, 0, 0, 0.05) inset;
+    color: $color-font-default;
+    padding: 0px 0px 0px 0.769em;
+	@include rounded-corners(3px);
+    font-size: 1em;
+    height: 2em;
+    line-height: 2em;
+    vertical-align: middle;
+}
+
+textarea {
+	background-color: #ebf3f7;
+    background-image: none;
+    border: none;
+    box-shadow: 0 1px 1px #B5B5B5 inset, 0 -1px 4px rgba(0, 0, 0, 0.05) inset;
+    color: $color-font-default;
+    padding: 0px 0px 0px 0.769em;
+	@include rounded-corners(3px);
+    font-size: 1em;
+    line-height: 1.5em;
+    vertical-align: middle;
+}
+
+input[type="text"]:focus, 
+input[type="password"]:focus,
+select:focus {
+    background-color: #fff5da;
+}
+
+input[type="text"]:disabled,
+input[type="password"]:disabled,
+select:disabled {
+    background-color: #eaeaea;
+    background-image: url('../img/texture-45dg-lines-gray.gif');
+    background-repeat: repeat;
+    background-position: top left;
+}
+
+select,
+.select {
+    line-height: 1.231em;
+    padding-top: 0.385em;
+    padding-bottom: 0.385em;
+}
+
+select option {
+    padding: 0px 0px 0px 0.769em;
+    vertical-align: middle;
+}
+
+/*** Images
+************************************************/
+
+img
+{
+	max-width:100%;
+	
+	&.float-right,
+	&.set-right
+	{
+		margin-left:2em;
+	}
+	
+	&.float-left,
+	&.set-left
+	{
+		margin-right:2em;
+	}
+}
+
+a img
+{
+	border:none;
+}
+
+/*** Misc
+************************************************/
+
+hr {
+	display: block;
+	margin: 0 0 1.538em 0;
+	height: 1px;
+	width: 100%;
+	border: none;
+	background-color: $color-ruler;
+	clear: both;
+}
+
+
+/*** Structure
+**************************************************************/
+
+#viewport
+{
+	
+}
+
+#site
+{
+	background: #ffffff;
+}
+
+#siteheader
+{
+   background-color:#ffffff;
+}
+
+.header-container,
+.footer-navigation,
+#sitefooter,
+#sitecontent, /* Remove this when #sitecontent has been replaced with #page in every instance*/
+#page,
+footer
+{
+	width: auto;
+	max-width: 960px;
+	//max-width: 1170px;
+	margin: 0px auto;
+	overflow: hidden;
+	//position: relative;
+}
+
+.navigation-container {
+	width: auto;
+	max-width: 1170px;
+	margin: 0px auto;
+	position: relative;
+}
+
+.footer-navigation {
+	margin-top: 220px;
+	margin-bottom: 20px;
+	border: 1px solid $border-color;
+	padding: 4px;
+
+	.footer-inner {
+		background: $footer-navigation-color;
+		float: left;
+		width: 100%;
+
+		a {
+			text-decoration: none;
+			color: $color-font-default;
+		}
+
+		.col {
+			float: left;
+			width: 25%;
+			padding: 20px;
+		}
+	}
+}
+
+footer {
+	.footer-wrapper {
+		border: 1px solid #dcdcdc;
+		padding: 2em;
+		margin: 40px auto;
+	}
+
+	.footer-item {
+		width: 50%;
+		float: left;
+		clear: none !important;
+		margin: 0;
+		text-align: center;
+	}
+
+	.small {
+		text-align: center;
+		color: $color-font-small;
+	}
+}

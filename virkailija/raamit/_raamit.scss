@@ -1,0 +1,168 @@
+#raamit-header {
+    margin-bottom: 20px;
+    background-color: #149ecb;
+    padding-top: 10px;
+    position:relative;
+
+    min-width: 960px;
+    
+    .header-content {
+
+        background-image: url(../img/navigation-divider.jpg);
+        background-repeat: repeat-x;
+        background-attachment: scroll;
+        background-position: left bottom;
+        height: 38px;
+        padding-bottom: 10px;
+
+        a {
+            color: #fff;
+            height: 38px;
+            line-height: 38px;
+            vertical-align: middle;
+            display: inline-block;
+            @include font-size-px-to-em(15);
+        }
+
+        a.authentication {
+            display: none;
+        }
+    }
+
+    #opintopolku-logo {
+        background-image: url(../img/opintopolkufi.png);
+        width: 153px;
+        height: 34px;   
+    }
+    
+    .main-navigation {
+        background-color:#06526b;
+        height: 41px;
+        .navigation {
+            margin:0;
+            padding:0;
+            
+            div.home {
+                display: inline-block;
+                padding-top: 11px; 
+                a {
+                    background-image: url(../img/home.jpg);
+                    background-repeat: no-repeat;
+                    width: 35px;
+                    height: 42px;
+                    background-position: center;
+                    padding:0 20px;
+                }
+            }
+
+            li {
+                position: relative;
+                list-style:none;
+                list-style-type: none;
+                display: none;
+                top: -1px;
+                height: 42px;
+                
+
+                span {
+                    line-height: 42px;
+                    padding:0 10px;
+                    color:#fff;
+                    text-decoration:none;
+
+                    &:hover {cursor: pointer}
+                }
+
+                &.current span {
+                    background-color: #0085b1;
+                }
+
+                .dropdown {
+                    background: #fff;
+                    position: absolute;
+                    @include box-shadow(0 1px 1px 0 #888);
+                    z-index: 10000;
+                    padding-left: 0;
+                    display: none;
+                    top: 42px;
+
+                    a {
+                        color: #333;
+                        padding:0 10px;
+                        display: block;
+                        white-space: nowrap;
+                        height:27px;
+                        line-height:27px;
+                        display: block;
+                        font-weight: normal;
+                        @include box-shadow(none);
+
+                        &:hover {
+                            background-color: #feebdb;
+                        }
+
+                        &:active {
+                            background-color: #fedc7d;
+                            font-weight: bold;
+                        }
+    
+                    }
+                }
+
+                &.action {
+                    a {
+                        color: #FFFFFF;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+#app-container {
+    min-width: 960px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+    
+#raamit-footer-container {
+    
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1200px;
+    min-width: 960px;
+
+    #raamit-footer {
+        background-color: #fff;
+        border: 1px solid #DCDCDC;
+        border-radius: 3px 3px 3px 3px;
+        margin-top: 20px;
+        clear: both;
+        height: 156px;
+
+        
+
+        #oph-logo {
+            background-image: url(../img/OPH_logo.png);
+            width: 125px;
+            height: 91px;
+        }
+
+        #okm-logo {
+            background-image: url(../img/OKM_logo.png);
+            width: 138px;
+            height: 86px;   
+        }
+
+        .footer-container {
+            background: none repeat scroll 0 0 #DCDCDC;
+            border-radius: 3px 3px 3px 3px;
+            margin: 0.625%;
+            padding: 10px 0;
+        }
+    }
+}

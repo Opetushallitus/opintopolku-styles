@@ -1,0 +1,9 @@
+.panel-filter {
+    .panel-body {
+        .dropdown-menu {
+            > li > a {
+                text-decoration: none;
+            }
+        }
+    }
+}

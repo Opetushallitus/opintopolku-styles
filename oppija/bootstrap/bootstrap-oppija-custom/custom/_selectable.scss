@@ -1,0 +1,21 @@
+.selectable {
+    padding: 10px;
+    transition: background-color 0.5s ease;
+    @include border-radius($border-radius-base);
+    border: 1px solid transparent;
+
+    &:hover {
+        background-color: $selectable-hover-bg-color;
+        cursor: pointer;
+    }
+
+    &:focus {
+        outline: none;
+        border: 1px solid $selectable-focus-border-color;
+    }
+
+    &.selected {
+        border: 1px solid $selectable-focus-border-color;
+        background-color: $selectable-hover-bg-color;
+    }
+}

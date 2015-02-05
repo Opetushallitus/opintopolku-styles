@@ -1,0 +1,23 @@
+/* styles for content coming from tarjonta */
+
+.tarjonta-content {
+
+    &.collapse,
+    &.collapsing {
+        margin-left: 30px;
+    }
+    
+    a {
+        &:before {
+            font-family: "fontello";
+            content: '\e800';
+            margin-right: .2em;
+            display: inline-block;
+        }
+
+        &.internal:before {
+            content: '';
+            margin: 0;
+        }
+    }
+}

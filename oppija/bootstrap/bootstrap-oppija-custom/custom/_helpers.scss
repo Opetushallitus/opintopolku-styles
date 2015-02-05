@@ -1,0 +1,77 @@
+ul,
+ol {
+    &.inside {
+        list-style-position: inside;
+        padding: 0;
+    }
+
+    &.spacious {
+        line-height: 2.0;
+    }
+}
+
+a {
+    text-decoration: underline;
+}
+
+a.underline {
+    text-decoration: underline !important;
+}
+
+label {
+    font-weight: normal;
+    margin-right: 10px;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.relative {
+    position: relative;
+}
+
+.margin-vertical-default {
+    margin-bottom: $line-height-computed;
+}
+
+.margin-vertical-small {
+    margin-bottom: 10px;
+}
+
+.margin-left-default {
+    margin-left: $line-height-computed;
+}
+
+.margin-left-small {
+    margin-left: 10px;
+}
+
+.margin-right-default {
+    margin-right: $line-height-computed;
+}
+
+.margin-right-small {
+    margin-right: 10px;
+}
+
+.margin-top-default {
+    margin-top: $line-height-computed;
+}
+
+.margin-top-small {
+    margin-top: 10px;
+}
+
+.capitalize {
+    display: inline-block;
+    text-transform: lowercase;
+
+    &:first-letter {
+        text-transform: uppercase;
+    }
+}

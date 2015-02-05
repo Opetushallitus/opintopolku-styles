@@ -1,0 +1,15 @@
+header.preview-header {
+    background-color: $header-bg-color;
+    margin-bottom: 60px;
+        
+    .header {
+        padding-top: 20px;
+        padding-bottom: 20px;
+            
+        a {
+            color: $link-inverse-color;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    }
+}

@@ -1,0 +1,69 @@
+#social {
+
+    li {
+        display: inline-block;
+        margin: 0 10px 0 0;
+
+        a {
+            position: relative;
+            display: inline-block;
+            height: 30px;
+            width: 30px;
+            color: #FFF;
+            font-size: 18px;
+            border: 1px solid rgba(0,0,0,0.2);
+            @include border-radius(3px);
+            transition: background 0.25s ease;
+            line-height: 30px;
+
+            &.facebook {
+                background: $facebook-bg-color;
+
+                &:hover {
+                    background: darken($facebook-bg-color, 10%);
+                }
+            }
+
+            &.linked_in {
+                background: $linkedin-bg-color;
+
+                &:hover {
+                    background: darken($linkedin-bg-color, 10%);
+                }
+            }
+
+            &.twitter {
+                background: $twitter-bg-color;
+
+                &:hover {
+                    background: darken($twitter-bg-color, 10%);
+                }
+            }
+
+            &.google_plus {
+                background: $googleplus-bg-color;
+
+                &:hover {
+                    background: darken($googleplus-bg-color, 10%);
+                }
+            }
+
+            &.muu {
+                background: $other-bg-color;
+
+                &:hover {
+                    background: darken($other-bg-color, 10%);
+                }
+            }
+
+            i {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                width: 28px;
+                text-align: center;
+            }
+        }
+    }
+}

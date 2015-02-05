@@ -1,0 +1,34 @@
+h4, .h4 {
+    font-family: $font-family-headings-small;
+    font-weight: bold;
+}
+
+h5, .h5 {
+    font-family: $font-family-headings-small;
+    font-style: italic;
+}
+
+h6, .h6 {
+    font-family: $font-family-headings-small;
+    font-weight: bold;
+}
+
+.lift {
+    font-family: $headings-font-family;
+    font-size: $font-size-lift;
+    text-transform: uppercase;
+}
+
+.emphasis {
+    font-family: $font-family-headings-small;
+    font-size: $font-size-emphasis;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: $letter-spacing-heading-emphasis;
+}
+
+.ingress {
+    font-family: $font-family-serif;
+    font-size: $font-size-lead;
+    font-style: italic;
+}

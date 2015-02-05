@@ -1,0 +1,19 @@
+@each $topic in $topics {
+    .no-svg .#{$topic}-icon {
+        float: left;
+        width: 48px;
+        height: 48px;
+        @include background-image("topics/png/#{$topic}-icon.png");
+        border: 1px solid $border-color-default;
+        margin: 0 10px 10px 0;
+    } 
+
+    .#{$topic}-icon {
+        float: left;
+        width: 48px;
+        height: 48px;
+        @include background-image("topics/#{$topic}-icon.svg");
+        border: 1px solid $border-color-default;
+        margin: 0 10px 10px 0;
+    } 
+}

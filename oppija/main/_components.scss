@@ -1,0 +1,512 @@
+
+
+
+/*** Help page
+************************************************/
+#help-page {
+    width:auto;
+    max-width:1140px;
+    margin:0px auto;
+
+    #siteheader {
+        width:auto;
+        max-width:1140px;
+        margin:0px auto;
+    }
+}
+
+
+/*** Infobox
+************************************************/
+
+.infobox {
+    background: $infobox-color;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid $infobox-border-color;
+
+    &.banner {
+        background: $infobox-banner-color;
+    }
+
+    .emphasized {
+        font-weight: bold;
+    }
+
+    .heading { 
+        padding-top: 10px;
+    }
+}
+
+
+
+/*** Application-basket
+************************************************/
+
+.application-basket-container {
+    h1 {
+        @include background-image("muistilista_ikoni.png");
+        background-repeat: no-repeat;
+        height: 52px;
+        line-height: 78px;
+        padding: 0 0 0 52px;
+    }
+}
+
+.application-basket {
+
+    table {
+        width: 100%;
+        border: none;
+        @include rounded-corners(5px);
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+
+    thead { 
+        tr th {
+            background-image: url('../img/texture-angled-lines.gif');
+            background-repeat: repeat;
+            background-position: top left;
+            @include rounded-corners(5px 5px 0px 0px);
+            text-transform: none;
+            text-align: left;
+            
+            
+            &:first-child {
+                border-top: 1px solid $application-basket-border-color;
+                border-left: 1px solid $application-basket-border-color;
+                border-right: 1px solid $application-basket-border-color;
+            }
+        }
+    }
+
+    thead tr th,
+    thead tr td,
+    tbody tr td,
+    tbody tr th {
+        border: none;
+        vertical-align: top;
+        padding: 1em 1em;
+        background-color: #fafafa;
+    }
+
+    tbody th {
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    tbody tr {
+        &:nth-child(even) {
+            td {
+                background-color: #ffffff;
+            }
+        }
+
+        th {
+            font-weight: bold;
+            text-align: left;
+        }
+    }
+
+    thead tr td,
+    tbody tr td,
+    tbody tr th {
+        border-right: 2px solid #f6f6f6;
+        &:first-child {
+            border-left: 1px solid $application-basket-border-color;
+        }
+        
+        &.last {
+            border-right: 1px solid $application-basket-border-color;
+        }
+
+        &.basket-remove {
+            width: 1px;
+        }
+    }
+
+    tbody tr {
+        &.last td {
+            border-bottom: 1px solid $application-basket-border-color;
+
+            &:first-child {
+                border-left: 1px solid $application-basket-border-color;
+                @include rounded-corner(bottom, left, 5px);
+            }
+
+            &.last {
+                border-right: 1px solid $application-basket-border-color;
+                @include rounded-corner(bottom, right, 5px);
+            }
+        }
+
+        &.first td,
+        &.first th {
+            border-top: 1px solid $application-basket-border-color;
+
+            &:first-child {
+                border-left: 1px solid $application-basket-border-color;
+                @include rounded-corner(top, left, 5px);
+            }
+
+            &.last {
+                border-right: 1px solid $application-basket-border-color;
+                @include rounded-corner(top, right, 5px);
+            }
+        }
+    }
+
+    table.sub {
+        border: none;
+        border-spacing: 0;
+        width: 100%;
+        border-collapse: collapse;
+
+        tbody tr td {
+            background: none;
+            padding: 0 1em 10px;
+        }
+
+        thead tr td,
+        tbody tr td {
+            border-right: none;
+            &:first-child {
+                border-left: none;
+            }
+            
+            &.last {
+                border-right: none;
+            }
+        }
+
+        tbody tr {
+            &:nth-child(even) {
+                td {
+                    background: none;
+                }
+            }
+
+            td {
+                border-bottom: none;
+            }
+
+            &.last td {
+                border-bottom: none;
+
+                &:first-child {
+                    border-left: none;
+                }
+
+                &.last {
+                    border-right: none;
+                }
+            }
+
+            &.first td {
+                border-top: none;
+
+                &:first-child {
+                    border-left: none;
+                }
+
+                &.last {
+                    border-right: none;
+                }
+            }
+        }
+    }
+
+    .action-area {
+        line-height: 2em;
+
+        a {
+            margin: 0 2em 0 0;
+
+            &.last {
+                margin: 0;
+            }
+        }
+    }
+
+    .basket-table-cell-block {
+        margin-top: 1em;
+    }
+}
+
+
+/*** search-applications
+************************************************/
+/*
+#search-applications .form-row.narrow {
+
+    .form-row-label {
+        width: 100px;
+        max-width: 30%;
+        text-align: left;
+    }
+
+    .form-row-content {
+        max-width: 70%;
+    }
+}
+*/
+
+
+
+
+
+/*** Notifications
+************************************************/
+.notification {
+    display: inline-block;
+    padding: 15px 30px 15px 50px;
+    background-size: 20px 21px;
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    @include box-shadow(1px 1px 1px 0 rgba(0,0,0,0.5));
+    @include rounded-corners(3px);
+    @include text-shadow(1px 1px 1px rgba(255,255,255,1));
+
+    &.large {
+        background-size: 28px 29px;
+        padding-left: 70px;
+    }
+    
+    &.warning {
+        @include background-image("icon-notification-small.png");
+        background-color: #fee7a5;
+        color: #730d02;
+
+        &.large {
+            @include background-image("icon-notification.png");
+        }
+    }
+
+    &.info {
+        color: #333;
+        background-color: #c2e6f1;
+        @include background-image("icon-information.png");
+    }
+
+    &.confirmation {
+        color: #333;
+        background-color: #c6f1cb;
+        @include background-image("icon-accepted.png");
+    }
+}
+
+
+/* Social links */
+
+#social {
+
+    li {
+        display: inline-block;
+        margin: 0 6px 0 0;
+
+        a {
+            display: inline-block;
+            height: 26px;
+            width: 26px;
+            color: transparent;
+            font-size: 0px;
+
+            &.facebook {
+                background: transparent url('../img/social/facebook.png') no-repeat scroll 0 0;
+            }
+
+            &.linked_in {
+                background: transparent url('../img/social/linkedin.png') no-repeat scroll 0 0;
+            }
+
+            &.twitter {
+                background: transparent url('../img/social/twitter.png') no-repeat scroll 0 0;
+            }
+
+            &.google_plus {
+                background: transparent url('../img/social/googleplus.png') no-repeat scroll 0 0;
+            }
+
+            &.muu {
+                background: transparent url('../img/social/other.png') no-repeat scroll 0 0;
+            }
+
+            &:hover {
+                background-position: -26px 0px;
+            }
+
+            &:active {
+                background-position: -52px 0px;
+            }
+        }
+    }
+}
+
+
+/* Application system */
+
+.application-container {
+    .application-system {
+        margin-bottom: 2em;
+    }
+
+    button {
+        margin-top: 3px;
+    }
+
+    .add-to-basket {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 0 0 10px;
+    }
+
+    .title {
+        margin: 0;
+        padding: 5px 0 5px 10px;
+        background-color: $infobox-color;
+        border: $infobox-border-color 1px solid;
+        border-top: none;
+
+        &:first-child {
+            border-top: $infobox-border-color 1px solid;
+        }
+    }
+
+    .content {
+        margin: 0;
+        padding: 10px 0 10px 10px;
+        border: $infobox-border-color 1px solid;
+        border-top: none;
+    }
+
+    .small {
+        color: $color-font-small;
+    }
+}
+
+#select-location-dialog {
+
+    //padding: 0 20px 20px;
+
+    select,
+    .select {
+        width: 200px;
+        height: 200px;
+    }
+
+    .select {
+        list-style-type: none;
+        overflow-y: auto;
+
+        .icon {
+            &.remove {
+                background: transparent url('../img/fasetti-location-close.png') no-repeat scroll 0 0;
+                width: 10px;
+                height: 10px;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: $color-font-default;
+        }
+    }
+
+    .facet-location-separator {
+        background: transparent url('../img/facet-location-separator.png') no-repeat scroll 0 0;
+        display: inline-block;
+        margin: 0 5px;
+        width: 18px;
+        height: 18px;
+        font-size: 0;
+    }
+}
+
+.modal {
+    .close {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 16px;
+        height: 17px;
+        background-image: url(../img/popup-close-icon.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        cursor: pointer;
+        font-size: 0px;
+    }
+}
+
+/*  Näytä lisää -tekstikomponentti */
+/*
+.extendable-content {
+    @include transitions(height, 0.2s ease);
+
+}
+*/
+
+.ao-block {
+    border-bottom: 1px solid $border-color; 
+    margin-bottom: 1em;
+    padding-bottom: 2em;
+}
+
+.search-result-collapsed {
+    position: relative;
+    margin: 1em 0;
+
+    .result-content {
+        float: left; 
+        width: 60%;
+
+        h2 {
+            margin: 0;
+        }
+    }
+
+    .state-label {
+        float: right;
+    }
+
+    .collapser {
+        position: absolute; 
+        bottom: 0; 
+        right: 0;
+    }
+}
+
+.search-result-extended {
+    margin-top: 10px;
+    padding: 20px 10px;
+    background-color: $search-result-expanded-bg-color;
+    border-top: 1px dashed $border-color;
+
+    .search-result-applicationsystem {
+        margin-top: 2em;
+
+        .search-result-content {
+            margin: 0;
+            background: $body-bg-color;
+            border: $infobox-border-color 1px solid;
+            border-top: none;
+
+            .content {
+                width: 50%;
+                float: left;
+                border-left: none;
+                border-right: none;
+            }
+
+            .lastrow {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+/* Postal code */
+span.post-office {
+    margin-left : 10px;
+}

@@ -1,0 +1,502 @@
+
+/*** form-layout-table
+************************************************/
+.form-layout-table {
+    td {
+        border: 10px solid transparent;
+		vertical-align:top;
+    }
+}
+
+.structural-table
+{
+	width:100%;
+	padding:0px;
+	margin:0px;
+	border-width:0px;
+	
+	> tbody
+	{
+		> tr
+		{
+			> td
+			{
+				padding:0px;
+				margin:0px;
+				border-width:0px;
+				vertical-align:top;
+			}
+		}
+	}
+
+}
+
+
+/*** Virkailija-table-1 
+************************************************/
+// common table theme 
+
+.virkailija-table-1 {
+    border-spacing: 1px;
+    border-collapse: separate;
+
+    tr {
+        td,
+        th {
+            line-height: 2.3em;
+            padding: 0 0.5em;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        th a {
+            color: #000;
+        }
+    }
+
+    thead {
+        background-color: #eee;
+        @include background-image("table-header-bg.png");
+        background-repeat: repeat;
+        background-position: left top;
+
+        th {
+            border-bottom: 1px solid #c2c2c2;
+            border-top: 1px solid #ececec;
+        }
+
+        tr:first-of-type {
+
+            th:first-of-type {
+                @include rounded-corner(top, left, 5px);
+                border-left: 1px solid #ececec;
+            }
+
+            th:last-of-type {
+                @include rounded-corner(top, right, 5px);
+                border-right: 1px solid #ececec;
+            }
+
+        }
+    }
+
+    tbody {
+
+        td {
+            border-spacing: 0;
+            border: 1px solid #ececec;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f8f8f8;
+        }
+
+        tr:last-of-type {
+            
+            td:first-of-type {
+                @include rounded-corner(bottom, left, 5px);
+            }
+
+            td:last-of-type {
+                @include rounded-corner(bottom, right, 5px);
+            }
+        }
+    }
+
+    tr {
+        td.rule {
+            padding-left: 3em;
+            @include background-image("ketju-saanto.png");
+            background-repeat: no-repeat;
+            background-position: 0.8em center;
+            background-size: 1.5em;
+        }
+
+        td.follow-up-question {
+            padding-left: 3em;
+            @include background-image("nuoli-jatkokysymys.png"); 
+            background-repeat: no-repeat;
+            background-position: 0.8em center;
+            background-size: 1em;
+        }
+
+        td.condition {
+            padding-left: 3em;
+            @include background-image("pykala-ehto.png"); 
+            background-repeat: no-repeat;
+            background-position: 0.8em center;
+            background-size: 1em;
+        }
+    }
+
+    input,select {
+        position: relative;
+        bottom: 2px;
+    }
+
+    td.leftorientedcolumn {
+        text-align: left;
+    }
+}
+
+
+/*** Virkailija-table-2
+************************************************/
+
+.table-2 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+
+    tr.row-top-spacing td {
+        border-top: 15px solid transparent;
+    }
+
+    td {
+        border-right: 30px solid transparent;
+    }
+}
+
+
+
+/*** Virkailija-table-3
+************************************************/
+ 
+/* Common table style. To be used without thead/tbody/tfoot */
+
+.virkailija-table-3 {
+    width: 100%;
+    border-spacing: 1px;
+    border-collapse: separate;
+
+    tr {
+        &:first-of-type {
+
+            td:first-of-type {
+                @include rounded-corner(top, left, 5px);
+                border-left: 1px solid #ececec;
+            }
+
+            td:last-of-type {
+                @include rounded-corner(top, right, 5px);
+                border-right: 1px solid #ececec;
+            }
+        }
+
+        &:last-of-type {
+            
+            td:first-of-type {
+                @include rounded-corner(bottom, left, 5px);
+            }
+
+            td:last-of-type {
+                @include rounded-corner(bottom, right, 5px);
+            }
+        }
+
+        &:nth-child(even) td {
+            background-color: #f8f8f8;
+        }
+
+        td {
+            text-align: center;
+            line-height: 1.5em;
+            padding: 0.5em 1em;
+            border-spacing: 0;
+            border: 1px solid #ececec;
+        }
+    }
+}
+
+/*** Virkailija-table-4
+************************************************/ 
+
+.virkailija-table-4 {
+    width: 100%;
+    border-spacing: 1px;
+    border-collapse: separate;
+
+    tr {
+        td,
+        th {
+            line-height: 2.3em;
+            padding: 0 1.5em;
+            vertical-align: middle;
+        }
+    }
+
+    thead {
+        background-color: #eee;
+        @include background-image("table-header-bg.png");
+        background-repeat: repeat;
+        background-position: left top;
+
+        th {
+            border-bottom: 1px solid #c2c2c2;
+            border-top: 1px solid #ececec;
+        }
+
+        tr:first-of-type {
+
+            th:first-of-type {
+                @include rounded-corner(top, left, 5px);
+                border-left: 1px solid #ececec;
+            }
+
+            th:last-of-type {
+                @include rounded-corner(top, right, 5px);
+                border-right: 1px solid #ececec;
+            }
+
+        }
+    }
+
+    tbody {
+
+        td {
+            border-spacing: 0;
+            border: 1px solid #ececec;
+        }
+
+		tr:nth-child(10n-4) td,
+		tr:nth-child(10n-3) td,
+		tr:nth-child(10n-2) td,
+		tr:nth-child(10n-1) td,
+        tr:nth-child(10n-0) td {
+            background-color: #f8f8f8;
+        }
+
+        tr:last-of-type {
+            
+            td:first-of-type {
+                @include rounded-corner(bottom, left, 5px);
+            }
+
+            td:last-of-type {
+                @include rounded-corner(bottom, right, 5px);
+            }
+        }
+    }
+
+    tr {
+        td.rule {
+            padding-left: 3em;
+            @include background-image("ketju-saanto.png");
+            background-repeat: no-repeat;
+            background-position: 0.8em center;
+            background-size: 1.5em;
+        }
+
+        td.follow-up-question {
+            padding-left: 3em;
+            @include background-image("nuoli-jatkokysymys.png"); 
+            background-repeat: no-repeat;
+            background-position: 0.8em center;
+            background-size: 1em;
+        }
+
+        td.condition {
+            padding-left: 3em;
+            @include background-image("pykala-ehto.png"); 
+            background-repeat: no-repeat;
+            background-position: 0.8em center;
+            background-size: 1em;
+        }
+    }
+
+
+    input,select {
+        position: relative;
+        bottom: 2px;
+    }
+}
+
+
+
+/*** Dropmenu table
+************************************************/
+
+/* laskentakaavojen dropdown funktiolistalle */
+table.dropmenu-table {
+    position: relative;
+    z-index: 10;
+    top: -25px;
+    left: -5px;
+    border-collapse: separate;
+    border-spacing: 1px;
+
+    thead {
+        
+        th {
+            @include background-image("table-header-bg.png");
+            background-repeat: repeat;
+            background-position: left top;
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 0.5em 1em 0.5em 1em;
+            
+        }
+        
+    }
+
+    tbody {
+        
+        td {
+            padding: 0.5em;
+            background: #eee;
+            border: 1px solid #ccc;
+            @include transitions(background-color, 0.1s);
+            padding: 0.5em 1.5em 0.5em 1.5em;
+            text-align: center;
+
+            &:hover {
+                background-color: #fff5da;
+                @include box-shadow(0px 0px 2px 0 rgba(0,0,0,0.7) inset);
+            }
+
+            &:active {
+                background-color: #999;
+                color: white;
+                @include box-shadow(0px 0px 1px 0 rgba(0,0,0,0.5) inset);
+            }
+        }
+
+    }
+}
+
+.function {
+
+    &:hover {
+        table.dropmenu-table {
+            display: block;
+        }
+    }
+
+}
+
+
+
+
+
+
+/*
+	Taulukko tyyli perustietojen nayttamiselle, esim. hakijan henkilotietot
+*/
+.perustieto-table
+{
+	width:100%;
+	
+	tbody
+	{
+		tr
+		{
+			td:nth-child(odd)
+			{
+				text-align:right;
+			}
+			td:nth-child(even)
+			{
+				font-weight:bold;
+				text-align:left;
+			}
+		}
+	}
+}
+
+.key-value-table
+{
+	tbody
+	{
+		tr
+		{
+			th
+			{
+				
+				text-align:left;
+				font-weight:bold;
+				border-right:10px solid transparent;
+
+				
+				&.heading
+				{
+					
+					padding-top:1.5em;
+					font-style:normal;
+				}
+				
+				&.label
+				{
+					font-weight:normal;
+					font-style:italic;
+				}
+			}
+			
+			td
+			{
+				text-align:left;
+				border-right:10px solid transparent;
+			}
+			
+			td:first-child
+			{
+				text-align:right;
+			}
+			
+			
+		}
+	}
+}
+
+
+.form-summary-table
+{
+
+	td
+	{
+		vertical-align:top;
+	}
+
+	.label
+	{
+		font-weight:bold;
+		padding-right:1em;
+		line-height:inherit;
+	}
+
+	.sublabel
+	{
+		text-align:right;
+		padding-right:1em;
+	}
+
+
+	.extra
+	{
+		padding-left:1em;
+	}
+
+}
+
+
+.table-frame
+{
+	display:table;
+	width:100%;
+	padding:0px;
+	margin:0px;
+	border-width:0px;
+	
+	> .tr
+	{
+		display:table-row;
+		
+		> .td
+		{
+			display:table-cell;
+			vertical-align:top;
+			margin:0px;
+			border-width:0px;
+		}
+	}
+}
+
+

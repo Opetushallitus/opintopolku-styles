@@ -1,0 +1,81 @@
+// Fonts
+$font-family-headings-small:                "Helvetica Neue", helvetica, arial, sans-serif;
+
+$font-size-lift:                            ceil(($font-size-base * 2.769));
+$font-size-emphasis:                        ceil(($font-size-base * 0.92));
+$font-size-lead:                            ceil(($font-size-base * 1.38));
+$letter-spacing-heading-emphasis:           2px;
+
+// Colors
+$border-color-default:                      #DDD;
+
+$header-bg-color:                           #149ECB;
+$link-inverse-color:                        #FFF;
+$search-bar-focus-border-color:             #FDE7A5;
+$intro-link-color:                          #DBA000;
+
+$button-default-shadow-color:               #E7E7E7;
+$button-default-hover-background-color:     #C4C4C4;
+$button-default-hover-border-color:         #B5B5B5;
+
+$button-primary-shadow-color:               #FDEDC1;
+$button-primary-hover-background-color:     #E99F00;
+$button-primary-hover-border-color:         #C69100;
+
+$button-info-shadow-color:                  #DFF2F8;
+$button-info-hover-background-color:        #9FDBF0;
+$button-info-hover-border-color:            #59AECA;
+
+$input-hover-color:                         #FFF5DA;
+
+$panel-footer-bg-color:                     #DCDCDC;
+$panel-gray-bg-color:                       #FAFAFA;
+$panel-gray-border-color:                   #DDD;
+$panel-lift-bg-color:                       #FEEDBD;
+$panel-lift-shadow-color:                   rgba(0,0,0,.14);
+$panel-lift-blue-bg-color:                  #DFF2F8;
+$panel-lift-blue-shadow-color:              rgba(0,0,0,.14);
+
+$nav-tabs-bg-color:                         #DFF2F8;
+$nav-tabs-hover-bg-color:                   #BFE4F1;
+
+$search-result-extended-bg-color:           #F3FAFC;
+
+$table-bordered-border-color:               $border-color-default;
+
+$modal-header-border-color:                 #24A4CC;
+$modal-footer-border-color:                 $border-color-default;
+$modal-footer-bg-color:                     #F5F5F5;
+
+// z-index
+$z-index-ajax-loader:                       1001;
+
+// icons
+$facebook-bg-color:                         #3B5998;
+$googleplus-bg-color:                       #DD4B35;
+$linkedin-bg-color:                         #007BB6;
+$twitter-bg-color:                          #55ACEE;
+$other-bg-color:                            $header-bg-color;
+
+// paths
+$images-default-path:                       "../img/";
+
+// topics
+$topics:                                    "historia",
+                                            "kauppa",
+                                            "kielet",
+                                            "laki",
+                                            "liikenne",
+                                            "luonnontieteet",
+                                            "metsatalous",
+                                            "matkailu",
+                                            "kasvatus",
+                                            "taide",
+                                            "tekniikka",
+                                            "terveys",
+                                            "turvallisuus",
+                                            "yleissivistava";
+
+// selectable
+$selectable-hover-bg-color:                 #dff2f8;
+$selectable-focus-border-color:             #bfe4f1;

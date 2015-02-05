@@ -1,0 +1,42 @@
+.alert {
+    @include box-shadow(0px 1px 3px #828282);
+}
+
+.alert-icon {
+    padding-left: 60px; 
+    background-repeat: no-repeat;
+    background-position: 15px center;
+}
+
+.alert-success {
+    &.alert-icon {
+        @include background-image("icon-accepted.png");
+    }
+}
+
+.alert-info {
+    &.alert-icon {
+        @include background-image("icon-information.png");
+    }
+}
+
+.alert-warning {
+    &.alert-icon {
+        @include background-image("icon-notification.png");
+    }
+}
+
+.alert-danger {
+    &.alert-icon {
+        @include background-image("icon-notification.png");
+    }
+}
+
+.alert-heading {
+    padding: 10px 0;
+}
+
+.alert-title {
+    margin: 0;
+    padding: 0;
+}

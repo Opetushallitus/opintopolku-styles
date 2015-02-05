@@ -1,0 +1,7 @@
+.app-container {
+    margin: 60px 0 220px 0;
+
+    @media (max-width: $screen-sm-min) {
+        margin: 20px 0 40px 0;
+    }
+}

@@ -1,0 +1,154 @@
+/* Overlay */
+
+#overlay {
+    display:none;
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.5);
+    z-index:1000;
+
+    > a.close {
+        display:block;
+        position:absolute;
+        top:0px;
+        left:0px;
+        width:100%;
+        height:100%;
+    }
+}
+
+
+
+/* Popup */
+/*
+.popup-overlay {
+    background-color: #000;
+    opacity:0.4;
+    filter: alpha(opacity=40);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+#popup {
+    
+    .popup {
+        margin: 0 auto;
+        width: 300px;
+        position: relative;
+        border-radius: 20px;
+        @include box-shadow(3px 3px 3px 0 #5f5f5f);
+        max-width: 900px;
+        background: #eee;
+        z-index: 1000;
+        margin: 0 auto;
+        padding: 0 1em 1em;
+        border: 10px solid white;
+    }
+
+    .close {
+        display:block;
+        position:absolute;
+        top:5px;
+        right:5px;
+        width:16px;
+        height:17px;
+        @include background-image("popup-close-icon.png");
+        background-repeat:no-repeat;
+        background-position:center center;
+        cursor:pointer;
+    }
+
+    .popup-content {
+        display: inline-block;
+    }
+
+    .tagset .tag {
+        margin-bottom: 7px;
+    }
+}
+*/
+
+
+/* Popover window/dialog */
+
+
+.popup-dialog-wrapper
+{
+    color: #3e3e3e;
+    display:none;
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:100%;
+    height:100%;
+    margin:0px;
+    z-index:1000;
+    background-color:rgba(0,0,0,0.1);
+
+    &.inactive
+    {
+        opacity:0.5;
+    }
+    
+    > .popup-dialog-close
+    {
+        display:block;
+        position:absolute;
+        left:0px;
+        top:0px;
+        width:100%;
+        min-height:100%;
+        
+    }
+    
+    .popup-dialog
+    {
+        display:block;
+        margin: 2em auto;
+        background: #ffffff;
+        position: relative;
+        padding: 0px;
+        border-radius: 3px 3px 3px 3px;
+        box-shadow: 2px 2px 2px 0 #5f5f5f;
+        width:auto;
+        max-width:960px !important;
+        min-width:460px !important;
+        height:auto;
+        padding: 0 20px 20px;
+        border: 10px solid #FFFFFF;
+        
+        > .popup-dialog-close
+        {
+            display: block;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 16px;
+            height: 17px;
+            background-image: url(../img/popup-close-icon.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            cursor: pointer;
+            color: transparent;
+            font-size: 0px;
+        }
+        
+        > .popup-dialog-header
+        {
+            font-size:14px;
+            font-weight:bold;
+            width:auto;
+            color:#333333;
+        }
+        
+        > .popup-dialog-content
+        {
+            display:inline-block;
+        }
+    }
+}

@@ -1,0 +1,56 @@
+.facet-selections {
+    margin-bottom: 1em;
+
+    ul {
+        margin: 0;
+        padding: 0;
+
+        li {
+            list-style-type: none;
+            display: inline-block;
+            margin: 10px 10px 0 0;
+
+            a.facet-selection {
+                display: inline-block;
+                padding: 0 10px;
+                background: #8BCFE3;
+                text-decoration: none;
+                color: $text-color;
+                border: 1px solid #51ABC6;
+                border-radius: $border-radius-base;
+                @include box-shadow(inset 0px 1px 1px 0px #C1E5F0);
+
+                &:hover {
+                    @include gradient-vertical(#55B9D7, #8BCFE3);
+                    cursor: pointer;
+
+                    .remove {
+                        background: transparent url('../img/selection-close.png') no-repeat scroll right 0;
+                    }
+                }
+
+                &:active {
+                    @include gradient-vertical(#55B9D7, #8BCFE3);
+                    @include box-shadow(inset 0px 1px 1px 0px #3D94AD);
+                }
+
+                .remove {
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    margin: 0 0 0 4px;
+                    font-size: 0;
+                    background: transparent url('../img/selection-close.png') no-repeat scroll left 0;
+                }
+
+                &:hover, &:active {
+                    color: $text-color;
+                }
+            }
+
+            &:first-child {
+                padding-left: 0;
+            }
+        }
+    }
+}

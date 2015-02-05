@@ -1,0 +1,25 @@
+.tabdrop {
+    display: none;
+    position: relative;
+    top: 1px;
+    padding: 1px; 
+    background: #FFF; 
+    border: 1px solid gainsboro; 
+    border-radius: $border-radius-base $border-radius-base 0 0;
+
+    .tabdrop-toggler {
+        background: #dff2f8; 
+        padding: 10px 20px; 
+        cursor: pointer;
+    }
+
+    .tabdrop-label {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+
+    @media (max-width: $screen-md-min) {
+        display: block;
+    }
+}

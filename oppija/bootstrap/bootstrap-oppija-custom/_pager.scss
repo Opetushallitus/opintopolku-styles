@@ -1,0 +1,104 @@
+//
+// Pager pagination
+// --------------------------------------------------
+
+
+.pager {
+  padding-left: 0;
+  margin: $line-height-computed 0;
+  list-style: none;
+  text-align: center;
+  @include clearfix();
+  li {
+    display: inline;
+    > a,
+    > span {
+      display: inline-block;
+      padding: 5px 14px;
+      background-color: $pager-bg;
+      border: 1px solid $pager-border;
+      border-radius: $pager-border-radius;
+      text-decoration: none;
+    }
+
+    > a:hover,
+    > a:focus {
+      text-decoration: none;
+      background-color: $pager-hover-bg;
+    }
+  }
+
+  .next {
+    > a,
+    > span {
+      float: right;
+      font-weight: bold;
+
+      &:after {
+        background: transparent url('../img/angle-right.png') no-repeat scroll left 0;
+        content: "";
+        display: inline-block;
+        width: 9px;
+        height: 15px;
+        margin: 0 0 0 10px;
+        vertical-align: text-top;
+      }
+
+      &:hover {
+        &:after {
+          background-position: -9px 0;
+        }
+      }
+
+      &:active {
+        &:after {
+          background-position: -18px 0;
+        }
+      }
+
+    }
+  }
+
+  .previous {
+    > a,
+    > span {
+      float: left;
+      font-weight: bold;
+
+      &:before {
+        background: transparent url('../img/angle-left.png') no-repeat scroll left 0;
+        content: "";
+        display: inline-block;
+        width: 9px;
+        height: 15px;
+        margin: 0 10px 0 0;
+        vertical-align: text-top;
+      }
+
+      &:hover {
+        &:before {
+          background-position: -9px 0;
+        }
+      }
+
+      &:active {
+        &:before {
+          background-position: -18px 0;
+        }
+      }
+
+    }
+  }
+
+  .disabled {
+    > a,
+    > a:hover,
+    > a:focus,
+    > span {
+      color: $pager-disabled-color;
+      background-color: $pager-bg;
+      cursor: not-allowed;
+    }
+  }
+
+}

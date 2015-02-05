@@ -1,0 +1,14 @@
+/* skip navigation link */
+#skip-link {
+    a {
+        position: absolute;
+        top: -500px;
+
+        &:focus {
+            display: block;
+            top: 0;
+            padding: 10px 20px;
+            background: #FFFFFF;
+        }
+    }
+}

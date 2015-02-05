@@ -1,0 +1,8 @@
+input,
+textarea,
+select,
+.select {
+    &:hover {
+        background-color: $input-hover-color;
+    }
+}

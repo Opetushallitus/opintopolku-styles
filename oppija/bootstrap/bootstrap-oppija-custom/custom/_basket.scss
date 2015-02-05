@@ -1,0 +1,192 @@
+.application-basket-container {
+    h1 {
+        @include background-image("muistilista_ikoni.png");
+        background-repeat: no-repeat;
+        height: 52px;
+        line-height: 78px;
+        padding: 0 0 0 52px;
+    }
+}
+
+.application-basket {
+
+    table {
+        width: 100%;
+        border: none;
+        @include border-radius(5px);
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+
+    thead { 
+        tr th {
+            background-image: url('../img/texture-angled-lines.gif');
+            background-repeat: repeat;
+            background-position: top left;
+            @include border-radius(5px 5px 0px 0px);
+            text-transform: none;
+            text-align: left;
+            
+            
+            &:first-child {
+                border-top: 1px solid $border-color-default;
+                border-left: 1px solid $border-color-default;
+                border-right: 1px solid $border-color-default;
+            }
+        }
+    }
+
+    thead tr th,
+    thead tr td,
+    tbody tr td,
+    tbody tr th {
+        border: none;
+        vertical-align: top;
+        padding: 1em 1em;
+        background-color: #fafafa;
+    }
+
+    tbody th {
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    tbody tr {
+        &:nth-child(even) {
+            td {
+                background-color: #ffffff;
+            }
+        }
+
+        th {
+            font-weight: bold;
+            text-align: left;
+        }
+    }
+
+    thead tr td,
+    tbody tr td,
+    tbody tr th {
+        border-right: 2px solid #f6f6f6;
+        &:first-child {
+            border-left: 1px solid $border-color-default;
+        }
+        
+        &.last {
+            border-right: 1px solid $border-color-default;
+        }
+
+        &.basket-remove {
+            width: 1px;
+        }
+    }
+
+    tbody tr {
+        &.last td {
+            border-bottom: 1px solid $border-color-default;
+
+            &:first-child {
+                border-left: 1px solid $border-color-default;
+                @include border-radius(bottom, left, 5px);
+            }
+
+            &.last {
+                border-right: 1px solid $border-color-default;
+                @include border-radius(bottom, right, 5px);
+            }
+        }
+
+        &.first td,
+        &.first th {
+            border-top: 1px solid $border-color-default;
+
+            &:first-child {
+                border-left: 1px solid $border-color-default;
+                @include border-radius(top, left, 5px);
+            }
+
+            &.last {
+                border-right: 1px solid $border-color-default;
+                @include border-radius(top, right, 5px);
+            }
+        }
+    }
+
+    table.sub {
+        border: none;
+        border-spacing: 0;
+        width: 100%;
+        border-collapse: collapse;
+
+        tbody tr td {
+            background: none;
+            padding: 0 1em 10px;
+        }
+
+        thead tr td,
+        tbody tr td {
+            border-right: none;
+            &:first-child {
+                border-left: none;
+            }
+            
+            &.last {
+                border-right: none;
+            }
+        }
+
+        tbody tr {
+            &:nth-child(even) {
+                td {
+                    background: none;
+                }
+            }
+
+            td {
+                border-bottom: none;
+            }
+
+            &.last td {
+                border-bottom: none;
+
+                &:first-child {
+                    border-left: none;
+                }
+
+                &.last {
+                    border-right: none;
+                }
+            }
+
+            &.first td {
+                border-top: none;
+
+                &:first-child {
+                    border-left: none;
+                }
+
+                &.last {
+                    border-right: none;
+                }
+            }
+        }
+    }
+    
+    /*
+    .action-area {
+        line-height: 2em;
+
+        a {
+            margin: 0 2em 0 0;
+
+            &.last {
+                margin: 0;
+            }
+        }
+    }
+    */
+
+    .basket-table-cell-block {
+        margin-top: 1em;
+    }
+}

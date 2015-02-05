@@ -1,0 +1,234 @@
+
+/*** Form generic
+************************************************/
+
+.form
+{
+    display:block;
+    background-color:#ffffff;
+    border:solid 4px #ffffff;
+    margin:0.5em;
+    padding:1.538em;
+    $form-box-shadow: 0px 0px 1px 0px #c4c4c4, inset 0px 0px 1px 0px #c4c4c4;
+    @include box-shadow($form-box-shadow);
+    @include rounded-corners(6px);
+}
+
+input, input:focus,
+select, select:focus, select:active
+{
+    outline:none;
+}
+
+
+
+/*** Fieldset
+**********************************/
+
+fieldset {
+
+    border: none;
+    padding: 0;
+    margin: 2em 0;
+
+    legend {
+        padding: 0;
+        margin: 0 0 1em 0;
+        //margin: 0 0 1.538em 0;
+    }
+
+    small {
+        display: block;
+        font-style: italic;
+    }
+}
+
+
+/***  Label
+**********************************/
+
+label, .label {
+    line-height: 2em;
+}
+
+
+/*** Input(text), Select
+**********************************/
+
+.field-container-select {
+    padding: 0px 2px 0px 0px;
+}
+
+.field-container-text {
+    padding: 0px 0.923em 0px 0px;
+}
+
+.field-container-select select,
+.field-container-text input[type="text"] {
+
+}
+
+/*** Field container radio
+************************************************/
+
+.field-container-radio {
+
+    input[type="radio"] {
+        margin-right: 5px;
+    }
+
+    div {
+        position: relative;
+        top: -3px;
+
+        small {
+            margin-left: 24px;
+            padding-bottom: 5px;
+        }
+    }
+
+    p {
+        &.small {
+            width: 480px;
+            margin-bottom: 2.5em;
+            margin-top: 0.3em;
+            margin-left: 1.4em;
+        }
+    }
+}
+
+
+/*** Form row structure
+************************************************/
+
+.form-row {
+    margin: 1.5em 0px;
+    clear: both;
+
+    .form-row-label {
+        float: left;
+        width: 173px;
+        padding: 0px 17px 0px 0px;
+        text-align: right;
+    }
+
+    .form-row-content {
+        float: left;
+        width: 300px;
+        //max-width: 390px;
+        max-width: 455px;
+    }
+
+    select {
+        margin: 0 0 1em 0;
+    }
+}
+
+
+
+/*** Form item structure
+************************************************/
+
+.form-item {
+    clear: both;
+    margin: 2em 0;
+}
+
+.form-item-label {
+    display: inline-block;
+    color: #000000;
+    margin: 0 0 1em 0;
+}
+
+.form .form-item-content {
+    padding: 0 0 0 1em;
+}
+
+.form-item-checkbox {
+    margin: 0.25em 0;
+    .form-item-content {
+        padding: 0;
+    }
+}
+
+
+
+/*** Form item row
+************************************************/
+.form-item-row {
+    .form-item {
+        display: inline-block;
+        padding-right: 1em;
+    }
+}
+
+
+
+/*** Search result
+************************************************/
+
+.search-result {
+    
+    .result {
+        list-style-type: none;
+        padding-left: 0;
+        margin-top: 0;
+        margin-right: 0 !important;
+        float: left;
+        width: 70%;
+
+        li {
+            padding-right: 2em;
+        }
+    }
+
+    .result-options {
+        padding: 0;
+        margin: 0;
+        width: 30%;
+        float: left;
+    }
+}
+
+
+
+
+
+/*** Input(text), Select
+**********************************/
+
+.field-container-select {
+    padding: 0px 2px 0px 0px;
+    margin: 0 0 1em 0;
+}
+
+.field-container-text {
+    padding: 0px 0.923em 0px 0px;
+    margin: 0 0 1em 0;
+}
+
+.field-container-select select,
+.field-container-text input[type="text"] {
+
+}
+
+
+
+/*** Mandatory
+************************************************/
+.required:after {
+    content: " *";
+}
+
+.required-field {
+    font-size: 0.813em;
+    color: red;
+}
+
+.element-help {
+    margin: 0 0 1em 0;
+    p {
+        margin: 0;
+        padding: 0;
+    }
+}

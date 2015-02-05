@@ -1,0 +1,136 @@
+.nav {
+    margin-bottom: 0;
+    padding-left: 0; // Override default ul/ol
+    list-style: none;
+    @include clearfix;
+
+    li {
+        position: relative;
+        display: block;
+
+        > a {
+            position: relative;
+            display: block;
+            padding: 0 10px;
+            height: 36px;
+            text-decoration: none;
+            color: $color-font-default;
+            
+            &:hover,
+            &:focus,
+            &:active {
+                text-decoration: none;
+                color: $color-font-default;
+            }
+        }
+
+        // Disabled state sets text to gray and nukes hover/tab effects
+        &.disabled > a {
+            color: #BDBDBD;
+
+            &:hover,
+            &:focus {
+                color: #BDBDBD;
+                text-decoration: none;
+                background-color: transparent;
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    // Prevent IE8 from misplacing imgs
+    //
+    // See https://github.com/h5bp/html5-boilerplate/issues/984#issuecomment-3985989
+    > li > a > img {
+        max-width: none;
+    }
+}
+
+
+// Tabs
+// -------------------------
+
+// Give the tabs something to sit on
+.nav-tabs {    
+    li {
+        //color: #3E3E3E;
+        display: inline-block;
+        padding: 1px;
+        margin: 0 10px 0 0;
+        position: relative;
+        top: 2px;
+        float: left;
+        max-width: 390px;
+        background-color: #ffffff;
+        border: solid 1px $tab-border-color;
+        text-decoration: none;
+        text-shadow: 0 1px 0 #FFFFFF;
+        @include rounded-corner(top, left, $default-border-radius);
+        @include rounded-corner(top, right, $default-border-radius);
+
+        // Actual tabs (as links)
+        > a {
+            display: block;
+            padding: 0px 20px;
+            height: 36px;
+            line-height: 36px;
+            font-weight: normal;
+            background: #f6f6f6;
+            background: $tab-color;
+            cursor: pointer;
+            
+            &:hover {
+                background: $tab-hover-color;
+                text-shadow: $tab-color 0px 1px 0px;
+                text-decoration: underline;
+            }
+        }
+
+        &.fluid > a {
+            max-width: 390px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        // Active state, and it's :hover to override normal :hover
+        &.active {
+            border-bottom-width: 0px;
+            padding-bottom: 3px;
+            position: relative;
+            top: 1px;
+            
+
+            > a {
+                font-weight: bold;
+                border-bottom: 1px solid #ffffff;
+                background: #ffffff;
+                text-decoration: none;
+                text-shadow: none;
+            }
+        }
+    }
+}
+
+
+// Tabbable tabs
+// -------------------------
+
+// Clear any floats
+.tabbable {
+    @include clearfix;
+}
+
+// Show/hide tabbable areas
+.tab-content > .tab-pane, .pill-content > .pill-pane {
+    display: none;
+}
+.tab-content,
+.pill-content {
+    .active {
+        display: block;
+        border: solid 1px $tab-border-color;
+        background-color: #FFFFFF;
+        padding: 20px 10px;
+    }
+}
